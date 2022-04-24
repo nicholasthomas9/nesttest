@@ -7,7 +7,7 @@ export class MetricsInterceptor implements NestInterceptor {
     ) {}
 
     async intercept(context: ExecutionContext, next: CallHandler): Promise<Observable<any>> {
-        const startTime = Dat.now();
+        const startTime = Date.now();
         const request = context.switchToHttp().getRequest<Request | any>();
 
         return next.handle().pipe(
