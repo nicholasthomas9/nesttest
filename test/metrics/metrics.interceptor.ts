@@ -30,13 +30,10 @@ export class MetricsInterceptor implements NestInterceptor {
             request: {
                 method: request.method,
                 endpoint: request.path,
-                requestIp: request.referrerPolicy,
             },
-
             response: {
                 statusCode: response.statusCode,
             },
-
             usage: {
                 startTime,
                 totalMs: Date.now() - startTime,
