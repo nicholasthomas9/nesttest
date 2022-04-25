@@ -7,8 +7,8 @@ import {
 } from '@nestjs/swagger';
 import { MetricsService } from '../metrics/metrics.service';
 import { CatsService } from './cats.service';
-import { CreateCatDto } from './dto/create-cat.dto';
-import { Cat } from './entities/cat.entity';
+import { CreateCatDto } from '../dto/create-cat.dto';
+import { Cat } from '../entities/cat.entity';
 
 @ApiBearerAuth()
 @ApiTags('cats')

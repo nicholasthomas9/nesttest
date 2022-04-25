@@ -1,14 +1,15 @@
+import { Injectable, Scope } from "@nestjs/common";
 
 
-@Injectable({
-    scope: Scope.REQUEST,
-})
+@Injectable()
 export class MetricsService {
     private metricsData: Record<string, any> = {};
     
     setMetricsData(value: unknown, path?: string) {
         if (path) {
-            set(this.matricsData, path, value);
+            console.log(path);
+            
+            // set(this.matricsData, path, value);
         }else if (typeof value === 'object') {
             this.metricsData = {...this.metricsData, ...value};
         }
